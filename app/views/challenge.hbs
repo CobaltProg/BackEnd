@@ -1,0 +1,46 @@
+<style>
+    
+    #background {
+        height: 100vh;
+        background-image: url({{challenge.photo}});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: blur(2px);
+    }
+
+    #content {
+        height: 100vh;
+        width: 100%;
+        padding: 8vh 2vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .styled-title {
+        background-color: black;
+        padding: 10px 15px;
+    }
+  </style>
+<div id="background"></div>
+<div id="content" class="container d-flex flex-column text-white">
+    <div class="row align-items-center justify-content-center">
+        <h1 class="styled-title text-white">{{challenge.name}}</h1>
+    </div>
+    <div class="row flex-column flex-grow-1 justify-content-end px-3">
+        <p class="font-weight-bold text-center">Niveau de difficulté : {{challenge.difficulty}}</p>
+        <div class="d-flex align-items-center justify-content-center rating mb-2">
+            <span class="mr-2">Score</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <p class="text-center">{{challenge.description}}</p>
+        <button type="button" class="d-block btn btn-lg mx-3 mb-3 rounded-pill theme-primary-bg">Commencer</button>
+        <button type="button" class="btn mx-4 mb-3 rounded-pill theme-primary-bg">Défi impossible ?</button>
+    </div>
+  </div>
+</div>

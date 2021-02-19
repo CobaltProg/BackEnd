@@ -1,0 +1,29 @@
+.theme-primary-bg {
+  background-color: #62C090;
+  color: #0A2E4E;
+}
+
+.theme-secondary-color {
+  color: #0A2E4E;
+}
+
+.checked {
+  color: orange;
+}
+
+.radius-15 {
+  border-radius: 15px;
+}
+
+.card {
+  -webkit-box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border: 0;
+}
+
+.userItem {
+  -webkit-box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

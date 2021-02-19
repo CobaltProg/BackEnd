@@ -1,0 +1,87 @@
+<style>
+    
+    #background {
+        height: 100vh;
+        background-color: #0a2e4e;
+        background-position: center;
+        filter: blur(2px);
+    }
+
+    #content {
+        height: 100vh;
+        width: 100%;
+        padding: 8vh 2vh 0 2vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .styled-title {
+        background-color: black;
+        padding: 10px 15px;
+    }
+    .actionDiv {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #bandeau, #lapin_corps, #oeil_droit, #oeil_gauche, #oreille_droite, #oreille_gauche, #Patte_droite, #Patte_gauche {
+        animation: lapin 1s ease-in-out infinite alternate;
+        transform-origin: bottom;
+    }
+
+    #bandeau {
+        animation: bandeau .2s ease-in-out infinite alternate;
+        transform-origin: bottom;
+    }
+
+    #Patte_droite {
+        animation: patte 1s ease-in-out infinite alternate;
+        transform-origin: bottom;
+    }
+
+    @keyframes lapin {
+        from {transform: rotateX(-15deg);}
+        to {transform: rotateX(15deg);}
+    }
+
+    @keyframes bandeau {
+        from {transform: rotateZ(-0.5deg);}
+        to {transform: rotateZ(0.5deg);}
+    }
+
+    @keyframes patte {
+        from {transform: rotate(1deg);}
+        to {transform: rotate(10deg);}
+    }
+  </style>
+</head>
+<body>
+<div id="background"></div>
+<div id="content" class="container d-flex flex-column text-white">
+    <div class="row align-items-center justify-content-center">
+        <h1 class="styled-title text-white">{{challenge.name}}</h1>
+    </div>
+    <div class="row flex-column align-items-center justify-content-center">
+        <p class="font-weight-bold text-center">Niveau de difficulté : {{challenge.difficulty}}</p>
+        <div class="d-flex align-items-center justify-content-center rating mb-2">
+            <span class="mr-2">Score</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <p class="text-center">{{challenge.description}}</p>
+    </div>
+    <div class="row flex-column flex-grow-1 justify-content-end px-3">
+        <div class="actionDiv mx-3">
+            <button type="button" class="btn btn-lg w-100 mb-3 rounded-pill theme-primary-bg">Commencer</button>
+            <button type="button" class="btn w-100 mb-3 rounded-pill theme-primary-bg">Défi impossible ?</button>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.76 370.47"><defs><style>.cls-1{fill:#66bb8f;}.cls-2{fill:#fff;}.cls-3{fill:#060708;}.cls-4{fill:#fae8dc;}.cls-5,.cls-6{fill:none;}.cls-6{stroke:#000;stroke-miterlimit:10;}.cls-7{fill:#f39316;}.cls-8{fill:#ea5328;}.cls-9{fill:#b1461f;}.cls-10{fill:#f9b240;}.cls-11{fill:#fae6da;}</style></defs><g id="bandeau"><polygon class="cls-1" points="306.87 113.99 319.1 99.83 318.99 99.56 256.75 124.03 262.95 139.79 321.49 116.79 306.87 113.99"/><polygon class="cls-1" points="304.56 154.48 326.32 152.52 326.43 152.24 251.89 127.41 245.45 143.22 315.56 166.58 304.56 154.48"/></g><g id="lapin_corps" data-name="lapin corps"><path class="cls-2" d="M33.34,369.78,50,274.28l9.85-56.08S69,112,139.45,96.94L177,91.63s21.6-3.86,22.36.76l40.92,11.44s60.63,12.81,50,139.38V294L288,369.78Z"/><circle class="cls-3" cx="137.45" cy="164.66" r="11.37"/><circle class="cls-3" cx="224.2" cy="168.8" r="11.37"/><circle class="cls-2" cx="142.09" cy="161.31" r="2.88"/><circle class="cls-2" cx="227.83" cy="165.14" r="2.88"/><circle class="cls-4" cx="117.18" cy="175.05" r="8.04"/><circle class="cls-4" cx="246.45" cy="181.17" r="8.04"/><line class="cls-5" x1="92.46" y1="167.01" x2="103.07" y2="172.98"/><line class="cls-5" x1="270.57" y1="175.05" x2="259.2" y2="179.17"/><line class="cls-5" x1="89.43" y1="175.05" x2="103.83" y2="177.11"/><line class="cls-5" x1="269.05" y1="193.19" x2="259.2" y2="186.35"/><line class="cls-5" x1="96.63" y1="183.09" x2="104.59" y2="181.09"/><path d="M175.33,162.26s9.09-3.59,12.88,1.92c0,0-1,2.66-6.44,3.83A15.4,15.4,0,0,1,175.33,162.26Z"/><path class="cls-6" d="M171.54,170s6.82,13.76,10.23-2c0,0-1.64,14.47,9.22,3.78"/><path class="cls-1" d="M99.89,119.34H265.26s9.1,10.56,11.89,15.44H87S97.09,122,99.89,119.34Z"/></g><g id="oeil_droit" data-name="oeil droit"><path class="cls-7" d="M133.55,154.74s-.81-9.92,8.65-17.53c0,0,5.77-4.16,7-7,0,0-5.65,14.48-.29,22.15,0,0,3.63,5.48,3.75,7.09,0,0,1.21-1.27,1.84-1.15l.29,3.57s1.44,6.18,0,8.14c0,0-2.88,12-17.36,9.88,0,0-14-1.92-10.61-19.17,0,0,5-9.92,1.9-10.61C128.7,150.07,129.86,149.38,133.55,154.74Z"/><path class="cls-8" d="M131.12,155.61a7.61,7.61,0,0,1,3.81,3.74s-.75-9.51,6.46-16.15c0,0,3.58-3.28,3.81-5.07,0,0-2.94,12.63,0,16.15,0,0,3.81,6.29,4,8,0,0,.92-1.22,1.27-1.1,0,0,.57,4.61,1.09,5.48,0,0,1.56,10.76-8.36,13.25,0,0-14,3-12.92-15.06C130.26,164.87,133.09,156.4,131.12,155.61Z"/><path class="cls-9" d="M143.93,160.25s.88-.85.92-1.12c0,0-1.69,5.68-.23,7.76a37.26,37.26,0,0,1,2.15,3.44c-.14.08-.46.33-.46.33l-3.73-4.11-.42-4Z"/><path class="cls-9" d="M147.17,170.66a4.94,4.94,0,0,1,.54-.42s.1,2.15.6,2.61c0,0,.6,5-4.22,6.07l.38-4.8,1.74-2.5Z"/><path class="cls-9" d="M137,168.1s.05,0,0-.48c0,0,1.11.63,1.1,1l.65,2.34-1.54-.31-.21-1.39Z"/><path class="cls-10" d="M136.12,167.66a3.37,3.37,0,0,1,2,1.69s-.3-4.8,3.5-7.57c0,0,2.31-1.85,2.62-2.65,0,0-1.93,6.15,0,8.11,0,0,2.07,2.88,2.07,3.42,0,0,.46-.46.85-.42a7.1,7.1,0,0,0,.54,2.84,5.76,5.76,0,0,1-4.92,6.21s-7.73,1.67-7.43-6.82C135.35,172.47,137.05,168.28,136.12,167.66Z"/></g><g id="oeil_gauche" data-name="oeil gauche"><path class="cls-7" d="M215.36,155.62s-.81-9.92,8.65-17.53c0,0,5.77-4.15,7-7,0,0-5.66,14.48-.29,22.15,0,0,3.63,5.48,3.75,7.1,0,0,1.21-1.27,1.84-1.16l.29,3.58s1.44,6.17,0,8.13c0,0-2.88,12-17.36,9.88,0,0-14-1.92-10.61-19.16,0,0,5-9.93,1.9-10.62C210.51,151,211.66,150.26,215.36,155.62Z"/><path class="cls-8" d="M212.93,156.49a7.66,7.66,0,0,1,3.81,3.75s-.75-9.52,6.46-16.15c0,0,3.58-3.29,3.81-5.08,0,0-2.94,12.63,0,16.15,0,0,3.8,6.29,4,8,0,0,.92-1.22,1.27-1.1,0,0,.57,4.62,1.09,5.48,0,0,1.55,10.76-8.36,13.26,0,0-14,3-12.92-15.07C212.07,165.75,214.9,157.29,212.93,156.49Z"/><path class="cls-9" d="M225.74,161.13s.88-.85.92-1.12c0,0-1.69,5.69-.23,7.77a34,34,0,0,1,2.14,3.44,5.34,5.34,0,0,0-.45.32l-3.73-4.11-.42-4Z"/><path class="cls-9" d="M229,171.54a6.64,6.64,0,0,1,.54-.42s.1,2.15.6,2.62c0,0,.6,5-4.22,6.06l.37-4.8,1.75-2.5Z"/><path class="cls-9" d="M218.83,169s.06,0,0-.47c0,0,1.12.62,1.11,1l.65,2.34-1.54-.31-.22-1.38Z"/><path class="cls-10" d="M217.93,168.54a3.4,3.4,0,0,1,2,1.7s-.31-4.81,3.5-7.58c0,0,2.31-1.84,2.62-2.65,0,0-1.93,6.15,0,8.11,0,0,2.07,2.89,2.07,3.42,0,0,.46-.46.85-.42a7.17,7.17,0,0,0,.54,2.85,5.76,5.76,0,0,1-4.93,6.2s-7.72,1.68-7.42-6.82C217.16,173.35,218.85,169.16,217.93,168.54Z"/></g><g id="oreille_droite" data-name="oreille droite"><path class="cls-2" d="M177,91.63s-1.9-35.69,4.17-50c0,0,6.82-41.76-33.35-35.62,0,0-40.17,24.18-8.34,91Z"/><path class="cls-11" d="M148.82,93.15s-17.91-50.78,0-60.63c0,0,26.25-5.31,18.67,30.31,0,0-1,22,1.38,30.32Z"/></g><g id="oreille_gauche" data-name="oreille gauche"><path class="cls-2" d="M240.25,103.83s50.81-87.42-13.64-92.54c0,0-25-.07-21.22,48.51,0,0-.76,23.42-6.06,32.59Z"/><path class="cls-11" d="M212.83,93.15s3.93-24.53,3.17-30.46c0,0-6.21-24.87,14.71-24.11,0,0,30.17-3-2.88,60.63Z"/></g><g id="Patte_droite" data-name="Patte droite"><path class="cls-2" d="M59.87,218.2,50,274.28S-22,192.36,14.4,165.15c0,0,19.78-11.17,27.28,7.58Z"/><ellipse class="cls-4" cx="25.04" cy="189.55" rx="12.13" ry="8.46"/><circle class="cls-4" cx="21.62" cy="172.98" r="6.18"/><circle class="cls-4" cx="33.98" cy="174.91" r="6.18"/><circle class="cls-4" cx="10.92" cy="180.17" r="6.18"/></g><g id="Patte_gauche" data-name="Patte gauche"><path class="cls-2" d="M290.27,243.21s20.47-13.72,22-25c0,0,22-29.63,38.66-12.13,0,0,32.58,34-60.64,87.92Z"/><circle class="cls-4" cx="333.73" cy="209.48" r="6.18"/><circle class="cls-4" cx="346.1" cy="215.67" r="6.18"/><circle class="cls-4" cx="346.1" cy="227.55" r="6.18"/><path class="cls-4" d="M327.55,221.37s14.49-3,12.37,17.29C339.92,238.66,321.36,239.44,327.55,221.37Z"/></g></svg>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+const _ = require('node-validator')
+
+module.exports = _.isObject()
+  .withOptional('author', _.isString())
+  .withOptional('date', _.isDate())
+  .withOptional('url', _.isString())
+  .withOptional('author', _.isString())
+  .withOptional('date', _.isDate())
+  .withOptional('body', _.isString())
+  .withOptional('comments', _.isArray())
+  .withOptional('photos', _.isArray())
